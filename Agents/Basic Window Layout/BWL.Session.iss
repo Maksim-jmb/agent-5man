@@ -22,14 +22,14 @@ objectdef bwlSession
 
         LavishScript:RegisterEvent[On Activate]
         LavishScript:RegisterEvent[OnWindowStateChanging]
-		LavishScript:RegisterEvent[OnMouseEnter]
-		LavishScript:RegisterEvent[OnMouseExit]
+	LavishScript:RegisterEvent[OnMouseEnter]
+	LavishScript:RegisterEvent[OnMouseExit]
         LavishScript:RegisterEvent[OnHotkeyFocused]
 
         ; ; Event[On Activate]:AttachAtom[This:OnActivate]
         ; Event[OnWindowStateChanging]:AttachAtom[This:OnWindowStateChanging]
-		; Event[OnMouseEnter]:AttachAtom[This:OnMouseEnter]
-		; Event[OnMouseExit]:AttachAtom[This:OnMouseExit]
+	; Event[OnMouseEnter]:AttachAtom[This:OnMouseEnter]
+	; Event[OnMouseExit]:AttachAtom[This:OnMouseExit]
         ; Event[OnHotkeyFocused]:AttachAtom[This:OnHotkeyFocused]
 
         This:EnableHotkeys
