@@ -21,4 +21,6 @@ currently running the group thru Hellfire instances trying to tweak things for s
 ** mainly a gameplay issue on my end - getting use to not moving the mouse while swapping out of RR to Vfxview or focus heal    
 * things get a little squirrelly when i do, usually dropping the healer client - main driver in my case
 
+i'll post a video when i get things more into memory - not automatic yet, to used to isboxer setup - have to stop and think sometimes what keys/buttons to hit atm with JMB
+
 
