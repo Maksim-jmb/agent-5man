@@ -1,0 +1,61 @@
+{
+  "launchSlots":5,
+  "launchdxNSlots":1,
+  "useGame":"WoW Retail",
+  "usedxNothing":"dxNothing",
+  "uselayout":"Horizontal",
+  "agents":[
+    {
+      "name":"Basic Global Hotkeys"
+    },
+    {
+      "name":"Basic Performance"
+    },
+    {
+      "name":"Basic Round-Robin"
+    },
+    {
+      "name":"Basic Window Layout"
+    },
+    {
+      "name":"Reload"
+    }
+  ],
+  "layouts":[
+    {
+      "layout":"Horizontal"
+    },
+    {
+      "layout":"Vertical"
+    },
+    {
+      "layout":"Custom"
+    },
+    {
+      "layout":"Vfx3"
+    },
+    {
+      "layout":"Vfx4"
+    },
+    {
+      "layout":"Vfx5"
+    }
+  ],
+  "teams":[
+    {
+      "team":"Team 1"
+    },
+    {
+      "team":"Team 2"
+    },
+    {
+      "team":"Team 3"
+    },
+    {
+      "team":"Team 4"
+    },
+    {
+      "team":"Team 5"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "templates": {
+        "party.allButtons":{
+            "type":"panel",
+            "name":"basicRoundRobin.allButtons",
+            "visibility":"visible",
+            "xFactor":0.75,
+            "yFactor":0.10,
+            "padding":20,
+            "borderThickness":3,
+            "borderBrush":{
+                "color":"#FF009600"
+            },
+            "backgroundBrush":{
+                "color":"#C4FFFFFF"
+            },
+            "children":[
+                {
+                    "type":"textblock",
+                    "text":"Party",
+                    "color":"#FF009600",
+                    "font":{
+                        "bold":true,
+                        "face":"Tahoma",
+                        "heightFactor":3
+                    }
+                }
+            ],
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false,
+            "inputHooks": {
+                "hook1":{
+                    "control":{
+                        "controlType": "button",
+                        "deviceType": "keyboard",
+                        "minValue": 1,
+                        "maxValue": 1
+                    },
+                    "eventHandler":{
+                        "type":"method",
+                        "object":"BRRSession",
+                        "method":"OnButtonHook"
+                    },
+                    "keyboardFocus": false,
+                    "mouseFocus": false
+                }
+            }
+        },
+        "melee.allButtons":{
+            "type":"panel",
+            "name":"basicRoundRobin.allButtons",
+            "visibility":"visible",
+            "xFactor":0.75,
+            "yFactor":0.10,
+            "padding":20,
+            "borderThickness":3,
+            "borderBrush":{
+                "color":"#FF964B25"
+            },
+            "backgroundBrush":{
+                "color":"#C4FFFFFF"
+            },
+            "children":[
+                {
+                    "type":"textblock",
+                    "text":"Melee",
+                    "color":"#FF964B25",
+                    "font":{
+                        "bold":true,
+                        "face":"Tahoma",
+                        "heightFactor":3
+                    }
+                }
+            ],
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false,
+            "inputHooks": {
+                "hook1":{
+                    "control":{
+                        "controlType": "button",
+                        "deviceType": "keyboard",
+                        "minValue": 1,
+                        "maxValue": 1
+                    },
+                    "eventHandler":{
+                        "type":"method",
+                        "object":"BRRSession",
+                        "method":"OnButtonHook"
+                    },
+                    "keyboardFocus": false,
+                    "mouseFocus": false
+                }
+            }
+        },
+        "ranged.allButtons":{
+            "type":"panel",
+            "name":"basicRoundRobin.allButtons",
+            "visibility":"visible",
+            "xFactor":0.75,
+            "yFactor":0.10,
+            "padding":20,
+            "borderThickness":3,
+            "borderBrush":{
+                "color":"#FF963296"
+            },
+            "backgroundBrush":{
+                "color":"#C4FFFFFF"
+            },
+            "children":[
+                {
+                    "type":"textblock",
+                    "text":"Ranged",
+                    "color":"#FF963296",
+                    "font":{
+                        "bold":true,
+                        "face":"Tahoma",
+                        "heightFactor":3
+                    }
+                }
+            ],
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false,
+            "inputHooks": {
+                "hook1":{
+                    "control":{
+                        "controlType": "button",
+                        "deviceType": "keyboard",
+                        "minValue": 1,
+                        "maxValue": 1
+                    },
+                    "eventHandler":{
+                        "type":"method",
+                        "object":"BRRSession",
+                        "method":"OnButtonHook"
+                    },
+                    "keyboardFocus": false,
+                    "mouseFocus": false
+                }
+            }
+        },
+        "mouse2.allButtons":{
+            "type":"panel",
+            "name":"basicRoundRobin.allButtons",
+            "visibility":"visible",
+            "xFactor":0.75,
+            "yFactor":0.10,
+            "padding":20,
+            "borderThickness":3,
+            "borderBrush":{
+                "color":"#FF000096"
+            },
+            "backgroundBrush":{
+                "color":"#C4FFFFFF"
+            },
+            "children":[
+                {
+                    "type":"textblock",
+                    "text":"Mouse2",
+                    "color":"#FF000096",
+                    "horizontalAlignment": "center",
+                    "font":{
+                        "bold":true,
+                        "face":"Tahoma",
+                        "heightFactor":3
+                    }
+                }
+            ],
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false,
+            "inputHooks": {
+                "hook1":{
+                    "control":{
+                        "controlType": "button",
+                        "deviceType": "mouse",
+                        "minValue": 1,
+                        "maxValue": 1
+                    },
+                    "eventHandler":{
+                        "type":"method",
+                        "object":"BRRSession",
+                        "method":"OnMouseButtonHook"
+                    },
+                    "keyboardFocus": false,
+                    "mouseFocus": false
+                }
+            }
+        }
+    },
+    "elements": [
+        {
+            "type":"panel",
+            "visibility":"hidden",
+            "name":"basicRoundRobin.events"
+        },
+        {
+            "type": "window",
+            "name": "brr.window",
+            "title": "Basic Round-Robin",
+            "visibility":"hidden"            
+        }
+    ]
+}

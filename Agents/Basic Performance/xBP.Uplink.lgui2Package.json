@@ -1,0 +1,60 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",    
+    "templates":{
+    },
+    "elements": [
+        {
+            "type": "window",
+            "name": "bp.window",
+            "title": "Basic Performance",
+            "visibility":"hidden",
+            "horizontalAlignment":"left",
+            "verticalAlignment":"bottom",
+            "widthFactor":0.3,
+            "heightFactor":0.4,
+            "strata":1.1,
+            "content":{
+                "type":"stackpanel",
+                "orientation":"vertical",
+                "widthFactor":1,
+                "heightFactor":1,
+                "backgroundBrush":{
+                    "color":"#FF003322"
+                },
+                "padding":20,
+                "children":[
+                    {
+                        "type":"button",
+                        "jsonTemplate":"button",
+                        "xFactor":0.48,
+                        "y":-18,
+                        "content":"Hide",
+                        "backgroundBrush":{
+                            "color":"#FF006644"
+                        },
+                        "font":{
+                            "heightFactor":1.2
+                        },
+                        "eventHandlers":{
+                            "onRelease":{
+                                "type":"method",
+                                "object":"BPUplink",
+                                "method":"HideUI"
+                            }
+                        }
+                    },
+                    {
+                        "type":"textblock",
+                        "text":"Work in progress" ,
+                        "margin":5,
+                        "font":{
+                            "bold":true,
+                            "face":"Verdana",
+                            "heightFactor":1.5
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

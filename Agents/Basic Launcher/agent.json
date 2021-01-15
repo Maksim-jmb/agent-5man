@@ -1,0 +1,35 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/agent.json",
+    "name": "Basic Launcher",
+    "platforms": {
+        "joe multiboxer uplink": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                        "run BL.Uplink.iss"
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [                        
+                        "endscript BL.Uplink"
+                    ]
+                }
+            }
+        },
+        "joe multiboxer session": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                        "run rg.Session.iss"
+                        
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [                        
+                        "endscript rg.Session"
+                    ]
+                }
+            }
+        }
+    }
+}

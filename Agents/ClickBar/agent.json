@@ -1,0 +1,32 @@
+{
+	"$schema": "http://www.lavishsoft.com/schema/agent.json",
+	"name": "Click Bar",
+	"platforms": {
+		"joe multiboxer uplink": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [ 
+                    ]
+                }
+            }
+		},
+		"joe multiboxer session": {
+			"eventHandlers": {
+				"onAgentStartup": {
+					"code": [
+						"run CB.Session.iss"
+					]
+				},
+				"onAgentShutdown": {
+					"code": [
+						"endscript CB.Session"
+					]
+				}
+			}
+		}		
+	}
+}

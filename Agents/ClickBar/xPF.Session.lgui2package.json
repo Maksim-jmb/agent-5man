@@ -1,0 +1,269 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    
+    "templates": {
+        "button.pf": {
+            "borderThickness": 2,
+            "borderRounding":1,
+            "styles": {
+                "onVisualPress": {
+                },
+                "onVisualRelease": {
+                },
+                "gotMouseOver": {
+                },
+                "lostMouseOver": {
+                }
+            }
+        }
+        
+    },
+    "elements": [
+        {
+            "type":"panel",
+            "name":"partyframe.panel",
+            "widthFactor":1,
+            "heightFactor":1,
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false,
+            "children":[
+                {
+                    "type":"table",
+                    "name": "jmb1.partyframes",
+                    "jsonTemplate": "button.pf",
+                    "acceptsKeyboardFocus":false,
+                    "acceptsMouseFocus":false,
+                    "margin":[25,1,25,1],
+                    "x":809,
+                    "y":941,
+                    "rows": [
+                        {                
+                            "height":66  
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "width":65 
+                        },
+                        {
+                            "width":65  
+                        },
+                        {
+                            "width":65    
+                        },
+                        {
+                            "width":65   
+                        },
+                        {
+                            "width":65   
+                        }
+                    ],
+                    "cellSpacing":[113,0],
+                    "children":[
+                        {
+                            "type":"button",
+                            "_row":1,
+                            "_column":1,
+                            "jsonTemplate": "button.pf",
+                            "acceptsKeyboardFocus":false,
+                            "acceptsMouseFocus":false,
+                            "borderThickness":1,
+                            "borderBrush":{
+                                "color":"#64FFFFFF",
+                                "opacity":"0.4"
+                            },
+                            "backgroundColor":{
+                                "color":"#10000000"
+                            },
+                            "eventHandlers":{
+                                "onMouse1Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "CBSession:WindowSwap[1]"
+                                    ]
+                                },
+                                "onMouse2Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "CBSession:CustomRRSwitch",
+                                        "relay party BRRSession:Enable[party]"
+                                    ]
+                                },
+                                "onMouse2Release":{
+                                    "type":"code",
+                                    "code":[
+                                    ]
+                                },
+                                "onMouseWheel":{
+                                    "type":"code",
+                                    "code":[
+                                        "relay party BRRSession:Disable"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "type":"button",
+                            "_row":1,
+                            "_column":2,
+                            "jsonTemplate": "button.pf",
+                            "acceptsKeyboardFocus":false,
+                            "acceptsMouseFocus":false,
+                            "borderThickness":1,
+                            "borderBrush":{
+                                "color":"#64FFFFFF",
+                                "opacity":"0.4"
+                            },
+                            "backgroundColor":{
+                                "color":"#10000000"
+                            },
+                            "eventHandlers":{
+                                "onMouse1Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "CBSession:WindowSwap[2]"
+                                    ]
+                                },
+                                "onMouse2Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "CBSession:CustomRRSwitch",
+                                        "relay ranged BRRSession:Enable[ranged]",
+                                        "relay ~ranged BRRSession:Disable"
+                                    ]
+                                },
+                                "onMouse2Release":{
+                                    "type":"code",
+                                    "code":[
+                                    ]
+                                },
+                                "onMouseWheel":{
+                                    "type":"code",
+                                    "code":[
+                                        "relay party BRRSession:Disable"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "type":"button",
+                            "_row":1,
+                            "_column":3,
+                            "jsonTemplate": "button.pf",
+                            "acceptsKeyboardFocus":false,
+                            "acceptsMouseFocus":false,
+                            "borderThickness":1,
+                            "borderBrush":{
+                                "color":"#64FFFFFF",
+                                "opacity":"0.4"
+                            },
+                            "backgroundColor":{
+                                "color":"#10000000"
+                            },
+                            "eventHandlers":{
+                                "onMouse1Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "CBSession:WindowSwap[3]"
+                                    ]
+                                },
+                                "onMouse2Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "relay party VfxSession:VfxButton",
+                                        "relay party BRRSession:Disable"
+                                    ]
+                                },
+                                "onMouse2Release":{
+                                    "type":"code",
+                                    "code":[
+                                    ]
+                                },
+                                "onMouseWheel":{
+                                    "type":"code",
+                                    "code":[
+                                        "relay party VfxSession:VfxButton",
+                                        "relay party BRRSession:Disable"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "type":"button",
+                            "_row":1,
+                            "_column":4,
+                            "jsonTemplate": "button.pf",
+                            "acceptsKeyboardFocus":false,
+                            "acceptsMouseFocus":false,
+                            "borderThickness":1,
+                            "borderBrush":{
+                                "color":"#64FFFFFF",
+                                "opacity":"0.4"
+                            },
+                            "backgroundColor":{
+                                "color":"#10000000"
+                            },
+                            "eventHandlers":{
+                                "onMouse1Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "CBSession:WindowSwap[4]"
+                                    ]
+                                },
+                                "onMouse2Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "relay party VfxSession:VfxButton2", 
+                                        "relay party BRRSession:Enable[mouse2]"
+                                    ]
+                                },
+                                "onMouse2Release":{
+                                    "type":"code",
+                                    "code":[
+                                    ]
+                                },
+                                "onMouseWheel":{
+                                    "type":"code",
+                                    "code":[
+                                        "relay party BRRSession:Disable"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "type":"button",
+                            "_row":1,
+                            "_column":5,
+                            "jsonTemplate": "button.pf",
+                            "acceptsKeyboardFocus":false,
+                            "acceptsMouseFocus":false,
+                            "borderThickness":1,
+                            "borderBrush":{
+                                "color":"#64FFFFFF",
+                                "opacity":"0.4"
+                            },
+                            "backgroundColor":{
+                                "color":"#10000000"
+                            },
+                            "eventHandlers":{
+                                "onMouse1Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "CBSession:WindowSwap[5]"
+                                    ]
+                                },
+                                "onMouse2Press":{
+                                    "type":"code",
+                                    "code":[
+                                        "CBSession:WindowSwap[5]"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+    

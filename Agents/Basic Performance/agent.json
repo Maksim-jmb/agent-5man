@@ -1,0 +1,30 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/agent.json",
+    "name": "Basic Performance",
+    "platforms": {
+        "joe multiboxer uplink": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [
+                    ]
+                }
+            }
+        },
+        "joe multiboxer session": {
+            "eventHandlers": {
+                "onAgentStartup": {
+                    "code": [
+                    ]
+                },
+                "onAgentShutdown": {
+                    "code": [
+                    ]
+                }
+            }
+        }
+    }
+}

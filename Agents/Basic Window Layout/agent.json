@@ -1,0 +1,36 @@
+{
+	"$schema": "http://www.lavishsoft.com/schema/agent.json",
+	"name": "Basic Window Layout",
+	"platforms": {
+		"joe multiboxer uplink": {
+			"eventHandlers": {
+				"onAgentStartup": {
+					"code": [
+						"run BWL.Uplink.iss"
+					]
+				},
+				"onAgentShutdown": {
+					"code": [
+						"endscript BWL.Uplink"
+					]
+				}
+			}
+		}	,
+		"joe multiboxer session": {
+			"eventHandlers": {
+				"onAgentStartup": {
+					"code": [
+						"run BWL.Session.iss",
+						"run Vfx.Session.iss"
+					]
+				},
+				"onAgentShutdown": {
+					"code": [
+						"endscript BWL.Session",
+						"endscript Vfx.Session"
+					]
+				}
+			}
+		}		
+	}
+}

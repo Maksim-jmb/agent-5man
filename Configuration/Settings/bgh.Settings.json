@@ -1,0 +1,13 @@
+{
+  "globalHotkeys":[
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5"
+  ],
+  "globalHealkeys":[
+    "F1",
+    "Shift+F2"
+  ]
+}

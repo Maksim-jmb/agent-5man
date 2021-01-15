@@ -1,0 +1,198 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json", 
+
+    "brushes":{
+        "white":{"color":"#FFFFFFFF"},
+        "dimwhite":{"color":"#FFF0F0F0"},
+        "greywhite":{"color":"#FFE6E6E6"},
+        "black":{"color":"#FF000000"},
+        "grey":{"color":"#FF3C3C3C"},
+        "yellow":{"color":"#FFFFFF00"},
+        "darkblue":{"color":"#FF000032"},
+        "blue":{"color":"#FF3C78C8"},
+        "lightblue":{"color":"#FF3C78C8"},
+        "brightblue":{"color":"#FF0000FF"},
+        "greyblue":{"color":"#C83C5064"},
+        "darkgreen":{"color":"#FF003C00"},
+        "green":{"color":"#FF006644"},
+        "lightgreen":{"color":"#FF64C8A0"}
+    },
+    "templates":{
+        "button.bl":{
+            "color":"#FFF0F0F0",
+            "padding": [8,5,8,5],
+            "borderThickness": 2,
+            "borderRounding":1,
+            "borderBrush": {
+                "color":"#FFE6E6E6"
+            },
+            "backgroundBrush": {
+                "color":"#FF000032"
+            },
+            "styles": {
+                "onVisualPress": {
+                    "borderBrush": {
+                        "color":"#FFFFFFFF"
+                    },
+                    "backgroundBrush": {
+                        "color":"#FFF0F0F0"
+                    }
+                },
+                "onVisualRelease": {
+                    "borderBrush": {
+                        "color":"#FFE6E6E6"
+                    },
+                    "backgroundBrush": {
+                        "color":"#FF003C00"
+                    }
+                },
+                "gotMouseOver": {
+                    "color":"#FFFFFFFF",
+                    "backgroundBrush": {
+                        "color":"#FF003C00"
+                    },
+                    "borderBrush": {
+                        "color":"#FFFFFFFF"
+                    }
+                },
+                "lostMouseOver": {
+                    "color":"#FFF0F0F0",
+                    "borderBrush": {
+                        "color":"#FFE6E6E6"
+                    },
+                    "backgroundBrush": {
+                        "color":"#FF000032"
+                    }
+                }
+            }
+        },
+        "checkbox": {
+            "contentContainer": {
+                "jsonTemplate":"checkbox.contentContainer"
+            }
+        },
+        "checkbox.bwl": {
+            "contentContainer": {
+                "jsonTemplate":"checkbox.contentContainer.bwl"
+            }
+        },
+        "checkbox.check":{      
+            "jsonTemplate":"textblock",
+            "type": "textblock",
+            "text": "☐",
+            "font": {
+                "height": 24
+            },
+            "padding": [3,0,3,0],
+            "hooks": {
+                "onUnchecked": {
+                "elementType": "checkbox",
+                "event": "onUnchecked",
+                "eventHandler": {
+                    "type": "style",
+                    "styleName": "onUnchecked"
+                }
+            },
+            "onChecked": {
+                "elementType": "checkbox",
+                "event": "onChecked",
+                "eventHandler": {
+                    "type": "style",
+                    "styleName": "onChecked"
+                }
+            },
+            "onIndeterminate": {
+                "elementType": "checkbox",
+                "event": "onIndeterminate",
+                "eventHandler": {
+                    "type": "style",
+                    "styleName": "onIndeterminate"
+                }
+            }
+            },
+            "styles": {
+                "onUnchecked": {
+                    "text": "☐"
+                },
+                "onChecked": {
+                    "text": "☑"
+                },
+                "onIndeterminate": {
+                    "text": "▣"
+                }
+            }      
+        },
+        "checkbox.check.bwl":{      
+            "jsonTemplate":"textblock",
+            "type": "textblock",
+            "verticalAlignment":"center",
+            "text": "☐",
+            "font": {
+                "height": 34
+            },
+            "padding": [3,3,3,3],
+            "hooks": {
+                "onUnchecked": {
+                    "elementType": "checkbox",
+                    "event": "onUnchecked",
+                    "eventHandler": {
+                        "type": "style",
+                        "styleName": "onUnchecked"
+                    }
+                },
+                "onChecked": {
+                    "elementType": "checkbox",
+                    "event": "onChecked",
+                    "eventHandler": {
+                        "type": "style",
+                        "styleName": "onChecked"
+                    }
+                },
+                "onIndeterminate": {
+                    "elementType": "checkbox",
+                    "event": "onIndeterminate",
+                    "eventHandler": {
+                        "type": "style",
+                        "styleName": "onIndeterminate"
+                    }
+                }
+            },
+            "styles": {
+                "onUnchecked": {
+                    "color":"#FFF0F0F0",
+                    "text": "☐"
+                },
+                "onChecked": {
+                    "color":"#FFFFFF00",
+                    "text": "☑"
+                },
+                "onIndeterminate": {
+                    "color":"#FF64C8A0",
+                    "text": "▣"
+                }
+            }      
+        },
+        "checkbox.contentContainer":{
+            "jsonTemplate":"stackpanel",
+            "type": "stackpanel",
+            "acceptsMouseFocus": false,
+            "orientation": "horizontal",
+            "children": [
+                {
+                    "jsonTemplate":"checkbox.check"
+                }
+            ]
+        },
+        "checkbox.contentContainer.bwl":{
+            "jsonTemplate":"stackpanel",
+            "type": "stackpanel",
+            "acceptsMouseFocus": false,
+            "orientation": "horizontal",
+            "children": [
+                {
+                    "jsonTemplate":"checkbox.check.bwl"
+                }
+            ]
+        }
+    }
+}

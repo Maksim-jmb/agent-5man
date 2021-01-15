@@ -1,0 +1,112 @@
+{
+    "$schema": "http://www.lavishsoft.com/schema/lgui2Package.json",
+    
+    "brushes":{
+        "black":{"color":"#FF000000"},
+        "vfx.window":{
+            "borderBrush":{
+                "color":"#FF000000"
+            }
+        }
+    },
+    "templates": {
+        "vfx.button":{
+            "type":"button",
+            "borderThickness":0,
+            "borderBrush":{
+                "color":"#FF000000"
+            },
+            "backgroundBrush":{
+                "color":"#FF000000"
+            },
+            "styles": {
+                "gotMouseOver": {
+                    "backgroundBrush": {
+                        "color":"#FF000000"
+                    }
+                },
+                "lostMouseOver": {
+                    "backgroundBrush": {
+                        "color":"#FF000000"
+                    }
+                }
+            }
+        },
+        "window.titleBar": {
+            "type": "dockpanel",
+            "backgroundBrush": {
+                "color":"#FF000000"
+            }
+        },
+        "vfx.source": {
+            "type": "canvas",
+            "x":0,
+            "y":0,
+            "width": 2560,
+            "height": 1080,
+            "backgroundbrush":{
+                "color":"#FF000000"
+            }
+        },
+        "vfx3.viewer":{
+            "name":"vfx3.window",
+            "type":"videofeed",
+            "width":640,
+            "height":360,
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false
+        },
+        "vfx4.viewer":{
+            "type":"videofeed",
+            "width":640,
+            "height":270,
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false
+        },
+        "vfx5.viewer":{
+            "type":"videofeed",
+            "width":384,
+            "height":270,
+            "acceptsKeyboardFocus":false,
+            "acceptsMouseFocus":false
+        }
+    },
+    "elements": [
+        {
+            "type": "window",
+            "name": "vfx3.window",
+            "visibility": "visible",
+            "borderThickness":0,
+            "acceptsKeyboardFocus":false,
+            "y":0,
+            "content": {
+                "type": "panel",
+                "name":"vfx3.panel"
+            }
+        },
+        {
+            "type": "window",
+            "name": "vfx4.window",
+            "visibility": "visible",
+            "borderThickness":0,
+            "acceptsKeyboardFocus":false,
+            "y":0,
+            "content": {
+                "type": "panel",
+                "name":"vfx4.panel"
+            }
+        },
+        {
+            "type": "window",
+            "name": "vfx5.window",
+            "visibility": "visible",
+            "borderThickness":0,
+            "acceptsKeyboardFocus":false,
+            "y":0,
+            "content": {
+                "type": "panel",
+                "name":"vfx5.panel"
+            }
+        }
+    ]
+}
