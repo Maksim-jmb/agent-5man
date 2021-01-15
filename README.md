@@ -13,4 +13,12 @@ Vfx buttons same as agent2: Mouse2, MouseWheel
 Toggle buttons same as well: Mouse1, MouseWheel     
 Relaygroups same: party, ranged, tank, heal, dps, monk, priest, mage, warlock, warrior
 
+Progression from "agent2"     
+My setup 2 monitors: 2560x1080, 1920x1080     
+Razer Keypad - limited keys compared to keyboard, so i try use buttons/mouseclicks where i can     
+currently running the group thru Hellfire instances trying to tweak things for smooth/reliable gameplay     
+
+** mainly a gameplay issue on my end - getting use to not moving the mouse while swapping out of RR to Vfxview or focus heal    
+* things get a little squirrelly when i do, usually dropping the healer client - main driver in my case
+
 
