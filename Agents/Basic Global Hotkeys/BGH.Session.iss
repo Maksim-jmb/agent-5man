@@ -40,7 +40,7 @@ objectdef bghSession
         if !${GlobalHotkeys.Type.Equal[array]}
             GlobalHotkeys:SetValue["[]"]
         if !${GlobalHealkeys.Type.Equal[array]}
-            GlobalHotkeys:SetValue["[]"]
+            GlobalHealkeys:SetValue["[]"]
     }
 
     method Enable()
