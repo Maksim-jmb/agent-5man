@@ -22,8 +22,8 @@ objectdef bwlSession
 
         LavishScript:RegisterEvent[On Activate]
         LavishScript:RegisterEvent[OnWindowStateChanging]
-		LavishScript:RegisterEvent[OnMouseEnter]
-		LavishScript:RegisterEvent[OnMouseExit]
+	LavishScript:RegisterEvent[OnMouseEnter]
+	LavishScript:RegisterEvent[OnMouseExit]
         LavishScript:RegisterEvent[OnHotkeyFocused]
         This:EnableHotkeys
         ; FocusClick eat
