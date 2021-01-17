@@ -22,16 +22,9 @@ objectdef bwlSession
 
         LavishScript:RegisterEvent[On Activate]
         LavishScript:RegisterEvent[OnWindowStateChanging]
-	LavishScript:RegisterEvent[OnMouseEnter]
-	LavishScript:RegisterEvent[OnMouseExit]
+		LavishScript:RegisterEvent[OnMouseEnter]
+		LavishScript:RegisterEvent[OnMouseExit]
         LavishScript:RegisterEvent[OnHotkeyFocused]
-
-        ; ; Event[On Activate]:AttachAtom[This:OnActivate]
-        ; Event[OnWindowStateChanging]:AttachAtom[This:OnWindowStateChanging]
-	; Event[OnMouseEnter]:AttachAtom[This:OnMouseEnter]
-	; Event[OnMouseExit]:AttachAtom[This:OnMouseExit]
-        ; Event[OnHotkeyFocused]:AttachAtom[This:OnHotkeyFocused]
-
         This:EnableHotkeys
         ; FocusClick eat
     }
@@ -92,7 +85,6 @@ objectdef bwlSession
             if !${Applied}
                 This:ApplyWindowLayout[FALSE]
         }
-        ; Event[On Activate]:Execute
     }
 
     method OnHotkeyFocused()
@@ -107,7 +99,6 @@ objectdef bwlSession
             if !${Applied}
                 This:ApplyWindowLayout[FALSE]
         }
-        ; Event[OnHotkeyFocused]:Execute
     }
 
     method OnWindowStateChanging(string change)
@@ -203,7 +194,6 @@ objectdef bwlSession
             LGUI2:AddBinding["${joBinding.AsJSON~}"]
         }
 
-
         if ${Settings.hotkeyToggleSwapOnActivate.Type.Equal[object]} && ${Settings.hotkeyToggleSwapOnActivate.Has[controls]}
         {
             joBinding:SetValue["${Settings.hotkeyToggleSwapOnActivate.AsJSON~}"]
@@ -238,7 +228,6 @@ objectdef bwlSession
 
         if ${Display.Window.IsForeground}
             return
-
         relay all "BWLSession:FocusSession[\"${Session~}\"]"
     }
      

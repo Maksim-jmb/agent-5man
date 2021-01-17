@@ -89,7 +89,6 @@ objectdef bwlSettings
         }
     }
 
-
     method Store()
     {
         variable jsonvalue jo
@@ -333,7 +332,6 @@ objectdef bwlLayout
     method ApplyWindowLayout(bool setOtherSlots=TRUE)
     {
     }
-
     member ToText()
     {
         return "Unknown"   
@@ -399,7 +397,6 @@ objectdef bwlHorizontalLayout
 
         variable int useX
         variable uint numSlot
-
         variable uint slotID
 
         for (numSlot:Set[1] ; ${numSlot}<=${Slots.Used} ; numSlot:Inc)
@@ -478,7 +475,6 @@ objectdef bwlVerticalLayout
 
         variable int useY
         variable uint numSlot
-
         variable uint slotID
 
         for (numSlot:Set[1] ; ${numSlot}<=${Slots.Used} ; numSlot:Inc)
@@ -495,7 +491,6 @@ objectdef bwlVerticalLayout
                     useY:Inc["${smallHeight}"]
             }
         }
-
     }
 }
 
@@ -511,7 +506,6 @@ objectdef bwlCustomWindowLayout
          variable jsonvalueref Slots="JMB.Slots"
 
         variable uint numSmallRegions=${Slots.Used}
-
         variable bool SwapOnActivate=TRUE
         variable bool SwapOnHotkeyFocused=TRUE
         variable bool LeaveHole=TRUE
@@ -536,7 +530,6 @@ objectdef bwlCustomWindowLayout
         variable uint numSmallRegion=1
 
         variable uint slotID
-
         variable int smallX
         variable int smallY
         variable uint smallWidth
@@ -559,7 +552,6 @@ objectdef bwlCustomWindowLayout
                     else
                         relay jmb${slotID} "WindowCharacteristics -stealth -pos -viewable ${smallX},${smallY} -size -viewable ${smallWidth}x${smallHeight} -frame none "
                 }
-
                 numSmallRegion:Inc
             }
             else
@@ -607,7 +599,6 @@ objectdef bwlCustomRRWindowLayout
             monitorHeight:Set["${Display.Monitor.MaximizeHeight}"]
         }
 
-
         ; if there's only 1 window, just go full screen windowed
         if ${numSmallRegions}==1
         {
@@ -625,7 +616,6 @@ objectdef bwlCustomRRWindowLayout
 
         mainHeight:Set["${monitorHeight}"]
         mainWidth:Set["${monitorWidth}"]
-
         smallWidth:Set["${mainWidth}/(${numSmallRegions}-1)"]
         smallHeight:Set["${monitorHeight}/(${numSmallRegions}-1)"]
 
@@ -704,7 +694,6 @@ objectdef bwlVfx3WindowLayout
         if ${num}>=7
             relay jmb${JMB.Slots.Used} "WindowCharacteristics -pos -viewable 2560,0 -size -viewable 1920x1080 -frame none "
             relay ~jmb${JMB.Slots.Used} "WindowCharacteristics -pos -viewable ${mainX},${mainY} -size -viewable ${mainWidth}x${mainHeight} -frame none "
-        
         BWLSession.Applied:Set[1]
     }
 }
@@ -755,7 +744,6 @@ objectdef bwlVfx4WindowLayout
         if ${num}>=9
             relay jmb${JMB.Slots.Used} "WindowCharacteristics -pos -viewable 2560,0 -size -viewable 1920x1080 -frame none "
             relay ~jmb${JMB.Slots.Used} "WindowCharacteristics -pos -viewable ${mainX},${mainY} -size -viewable ${mainWidth}x${mainHeight} -frame none"
-
         BWLSession.Applied:Set[1]
     }
 }
@@ -809,7 +797,6 @@ objectdef bwlVfx5WindowLayout
         if ${num}>=16
             relay jmb${JMB.Slots.Used} "WindowCharacteristics -pos -viewable 2560,0 -size -viewable 1920x1080 -frame none "
             relay ~jmb${JMB.Slots.Used} "WindowCharacteristics -pos -viewable ${mainX},${mainY} -size -viewable ${mainWidth}x${mainHeight} -frame none "
-
         BWLSession.Applied:Set[1]
     }   
 }

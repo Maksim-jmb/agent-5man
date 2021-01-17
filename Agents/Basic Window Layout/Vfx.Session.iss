@@ -10,9 +10,8 @@ objectdef vfxsession
     method Initialize()
     {
         LavishScript:RegisterEvent[OnSessionRenamed]
+        LavishScript:RegisterEvent[On Activate]
         Event[OnSessionRenamed]:AttachAtom[This:OnSetup]
-        ; This:SetSourceEnabled[1]
-        This:OnActivate2
         This:Load
         This:Setup
         This:Store
@@ -58,6 +57,7 @@ objectdef vfxsession
         relay party BRRSession:Disable
         relay party BWLSession:UpdateCurrentLayout[${UseLayout}]
         relay party BWLSession:ApplyWindowLayout
+        Event[On Activate]:Execute
     }
 
     method VfxButton2()
@@ -76,7 +76,6 @@ objectdef vfxsession
 
     method OnSetup()
     {
-        
         switch ${Settings.UseLayout}
         {    
             case Vfx3
@@ -100,14 +99,13 @@ objectdef vfxsession
     {
         variable uint NumAdded
         variable uint num
-
-            for (NumAdded:Set[1] ; ${NumAdded}<${JMB.Slots.Used} ; NumAdded:Inc)
-            {
-                relay jmb${NumAdded} LGUI2.Element[vfx${setlayout}.window]:SetVisibility[Hidden]
-            }
+        for (NumAdded:Set[1] ; ${NumAdded}<${JMB.Slots.Used} ; NumAdded:Inc)
+        {
+            relay jmb${NumAdded} LGUI2.Element[vfx${setlayout}.window]:SetVisibility[Hidden]
+        }
     }
 
-     method DestroyPartyVfx()
+    method DestroyPartyVfx()
     {
         relay party LGUI2.Element["vfx${setlayout}.window"]:Destroy
     }
@@ -231,7 +229,6 @@ objectdef vfxsession
             }
         }
         <$$"]
-
         LGUI2.Element[leftvfx.viewerpanel]:AddChild["${jo.AsJSON~}"]
     }
 
@@ -267,7 +264,6 @@ objectdef vfxsession
             }
         }
         <$$"]
-
         LGUI2.Element[midvfx.viewerpanel]:AddChild["${jo.AsJSON~}"]
     }
 
@@ -303,7 +299,6 @@ objectdef vfxsession
             }
         }
         <$$"]
-
         LGUI2.Element[rightvfx.viewerpanel]:AddChild["${jo.AsJSON~}"]
     }
 
@@ -393,9 +388,6 @@ objectdef vfxsession
 
     method LeftAddSlot2(uint Slot)
     {
-        ; if ${Slot}==${JMB.Slot}
-        ;     return
-
         variable jsonvalue jo
 
         variable string focusCommand="VfxSession:Focus[${Slot}]"
@@ -426,9 +418,6 @@ objectdef vfxsession
 
     method MidAddSlot2(uint Slot)
     {
-        ; if ${Slot}==${JMB.Slot}
-        ;     return
-            
         variable jsonvalue jo
 
         variable string focusCommand="VfxSession:Focus[${Slot}]"
@@ -459,9 +448,6 @@ objectdef vfxsession
 
     method RightAddSlot2(uint Slot)
     {
-        ; if ${Slot}==${JMB.Slot}
-        ;     return
-            
         variable jsonvalue jo
 
         variable string focusCommand="VfxSession:Focus[${Slot}]"
@@ -624,7 +610,6 @@ objectdef vfxsession
             }
         }
         <$$"]
-
         LGUI2.Element[firstvfx.viewerpanel]:AddChild["${jo.AsJSON~}"]
     }
 
@@ -654,7 +639,6 @@ objectdef vfxsession
             }
         }
         <$$"]
-
         LGUI2.Element[secondvfx.viewerpanel]:AddChild["${jo.AsJSON~}"]
     }
 
@@ -683,7 +667,6 @@ objectdef vfxsession
             }
         }
         <$$"]
-
         LGUI2.Element[thirdvfx.viewerpanel]:AddChild["${jo.AsJSON~}"]
     }
 
@@ -712,29 +695,8 @@ objectdef vfxsession
             }
         }
         <$$"]
-
         LGUI2.Element[fourthvfx.viewerpanel]:AddChild["${jo.AsJSON~}"]
     }
-
-    ; method SetSourceEnabled(bool newValue)
-    ; {
-    ;     if ${newValue}
-    ;     {
-    ;         LGUI2.Element[vfx.source]:Destroy
-
-    ;         variable jsonvalue jo
-    ;         jo:SetValue["${LGUI2.Template[vfx.source].AsJSON~}"]
-
-    ;         jo:Set["feedName","\"vfx${JMB.Slot}\""]
-
-    ;         LGUI2:LoadJSON["${jo.AsJSON~}"]
-    ;     }
-    ;     else
-    ;     {
-    ;         LGUI2.Element[vfx.source]:Destroy
-    ;     }
-    ; }
-
 }
 
 variable(global) vfxsession VfxSession

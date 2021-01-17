@@ -15,7 +15,6 @@ objectdef blSettings
     {    
         This:Load
         This:LoadSettings
-        
     }
 
      method Load()
@@ -235,7 +234,6 @@ objectdef blSettings
     {
         relay all exit
     }
-
 
     method SetTeam(string newValue)
     {

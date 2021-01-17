@@ -68,7 +68,6 @@ objectdef mmSession
             }
         }
         <$$"]
-
         LGUI2.Element[mm.viewerpanel]:AddChild["${jo.AsJSON~}"]
     }
 

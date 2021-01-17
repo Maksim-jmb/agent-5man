@@ -22,7 +22,6 @@ objectdef cbSession
     {
         ; if ${JMB.Slot}==${slot}
         ;     return
-
         uplink focus jmb${slot}
     }
 

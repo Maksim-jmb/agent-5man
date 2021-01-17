@@ -52,12 +52,6 @@
                     },
                     "backgroundColor":{
                         "color":"#64000000"
-                    },
-                    "eventHandlers":{
-                        "onMouse1Release":{
-                            "type":"code",
-                            "code":""
-                        }
                     }
                 },
                 {
@@ -149,18 +143,6 @@
                         "bold":true,
                         "face":"Tahoma",
                         "height":18
-                    },
-                    "eventHandlers":{
-                        "onMouse1Press":{
-                            "type":"code",
-                            "code":[
-                            ]
-                        },
-                        "onMouseWheel":{
-                            "type":"code",
-                            "code":[
-                            ]
-                        }
                     }
                 },
                 {

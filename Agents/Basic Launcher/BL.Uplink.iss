@@ -111,15 +111,15 @@ objectdef blUplink
     {
         if !${JMB.Slot[${numSlot}].ProcessID}
             JMB.Slot[${numSlot}]:Launch
-            
+            VfxSession:ClearVfxViews
     }
     
     method RelaunchMissingSlots()
     {
         JMB.Slots:ForEach["This:Relaunch[\${ForEach.Value.Get[id]}]"]
-        TimedCommand 50 BLUplink:JoinRelayGroups
+        TimedCommand 40 BLUplink:JoinRelayGroups
+        TimedCommand 50 BWLSession:ApplyWindowLayout
         TimedCommand 70 MMSession:Initialize
-        TimedCommand 70 BWLSession:ApplyWindowLayout
     }
 
     variable int setlayout

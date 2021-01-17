@@ -50,16 +50,19 @@
         "4":{
           "allow":true
         },
+        "Shift+4":{
+          "allow":true
+        },
         "5":{
+          "allow":true
+        },
+        "Shift+5":{
           "allow":true
         },
         "6":{
           "allow":true
         },
         "F9":{
-          "allow":true
-        },
-        "Num *":{
           "allow":true
         }
       },
@@ -83,9 +86,6 @@
           "allow":true
         },
         "F11":{
-          "allow":true
-        },
-        "Num *":{
           "allow":true
         }
       },

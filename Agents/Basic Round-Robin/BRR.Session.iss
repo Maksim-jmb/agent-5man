@@ -32,7 +32,6 @@ objectdef brrSession
             uplink focus -next ranged
         if ${Settings.CurrentProfile.Name.Equal["mouse2"]}
             uplink focus -next party
-        
     }        
 
     method OnControlHook(string controlName)
