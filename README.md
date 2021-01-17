@@ -23,4 +23,4 @@ currently running the group thru Hellfire instances trying to tweak things for s
 
 i'll post a video when i get things more into memory - not automatic yet, to used to isboxer setup - have to stop and think sometimes what keys/buttons to hit atm with JMB
 
-changed a couple small things - post them tomorrow, pretty playable atm...been running some instances fairly smooth without breaking clients.  Here is a quick video of vfx and little boss kill from Cata dungeons.  https://www.youtube.com/watch?v=dJ0jAJd4i9I
+changed a couple small things - post them tomorrow, pretty playable atm...been running some instances fairly smooth without breaking clients tonight.  Here is a quick video of vfx and little boss kill from Cata dungeons.  https://www.youtube.com/watch?v=dJ0jAJd4i9I
