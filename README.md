@@ -1,4 +1,7 @@
-# agent-5man
+# agent-5man  
+
+*currently only working on 1.02 Build 6772 - new changes with teams on 1.03 Build, currenlty adapting too     
+
 specific to my 5 man group using Vfx3
 
 cleaner version of "agent2"     
