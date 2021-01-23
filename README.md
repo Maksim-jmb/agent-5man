@@ -26,4 +26,4 @@ currently running the group thru Hellfire instances trying to tweak things for s
 
 i'll post a video when i get things more into memory - not automatic yet, to used to isboxer setup - have to stop and think sometimes what keys/buttons to hit atm with JMB
 
-1/23 working on new idea...see if i can finish it this weekend...took down the vid from earlier - made a small mistake leaving a text window open...Doh!
+1/23 working on new idea...see if i can finish it this weekend, trying to find a more efficient way to heal on the harder bosses in dungeons then a bunch of keys/macros - using modifiers...took down the vid from earlier - made a small mistake leaving a text window open...Doh!
